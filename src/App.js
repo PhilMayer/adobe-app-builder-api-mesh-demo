@@ -4,10 +4,10 @@ import React from "react";
 import { Tooltip } from "react-tooltip";
 import query from "./query.js";
 
-const API_MESH_URL =
-  "https://graph.adobe.io/api/c29aab13-2a06-41c5-8f67-5632ad62598c/graphql?api_key=077cf40dae5144ef8b799b0d53964e24";
 // const API_MESH_URL =
-//   "https://graph.adobe.io/api/fe0779e3-2d3e-45db-b043-5c8dcf7a9f04/graphql?api_key=99f0c5c18d2249b188d92529f31ccdf1";
+//   "https://graph.adobe.io/api/c29aab13-2a06-41c5-8f67-5632ad62598c/graphql?api_key=077cf40dae5144ef8b799b0d53964e24";
+const API_MESH_URL =
+  "https://graph.adobe.io/api/fe0779e3-2d3e-45db-b043-5c8dcf7a9f04/graphql?api_key=99f0c5c18d2249b188d92529f31ccdf1";
 
 class APIMeshExample extends React.Component {
   constructor(props) {
@@ -45,77 +45,77 @@ class APIMeshExample extends React.Component {
       <>
         <div>
           <h2>Your API Mesh query results</h2>
+          <h3>(Hover over data to view its source)</h3>
           <ul>
             {this.state.products.map((item, idx) => (
+              <>
               <li key={item.sku}>
-                <h1 id={item.name}>{item.name}</h1>
+              <img id={item.image.url} src={item.image.url} />
+                <p className="item-name auto-width" id={item.name}>{item.name}</p>
 
                 {this.state.salePrice ? (
-                  <div>
-                    <h4
-                      className="strike"
-                      id={
-                        idx + item.price_range.minimum_price.regular_price.value
-                      }
+                  <div className="price-container">
+                    <p
+                      className="price strike"
+                      id={idx + item.price_range.minimum_price.regular_price.value}
                     >
                       ${item.price_range.minimum_price.regular_price.value}
-                    </h4>
-                    <h4 className="sale" id={idx + this.state.salePrice}>
+                    </p>
+                    <p className="price sale" id={idx + this.state.salePrice}>
                       ${this.state.salePrice}
-                    </h4>
+                    </p>
                   </div>
                 ) : (
-                  <h4 id="price">
+                  <p id="price">
                     ${item.price_range.minimum_price.regular_price.value}
-                  </h4>
+                  </p>
                 )}
 
-                <img id={item.image.url} src={item.image.url} />
+                <button>ADD TO CART</button>
+                <span>&#9825;</span>
 
                 {item.demoDetails ? (
                   <div>
-                    <p id={item.sku}>
+                    <p className="auto-width" id={item.sku}>
                       Items remaining: {item.demoDetails.quantity}
                     </p>
-                    <p>Location: {item.demoDetails.location}</p>
+                    <p className="auto-width" id={item.sku + idx}>Location: {item.demoDetails.location}</p>
                   </div>
                 ) : (
                   <div></div>
                 )}
-                <p>Items nearby: 2</p>
+                
+                <Tooltip
+                  anchorId={item.image.url}
+                  place="bottom"
+                  content="Source: Venia Catalogue" />
 
                 <Tooltip
                   anchorId={item.name}
                   place="bottom"
-                  content="Source: Venia Catalogue"
-                />
+                  content="Source: Venia Catalogue" />
 
                 <Tooltip
-                  anchorId={item.image.url}
+                  anchorId={idx + item.price_range.minimum_price.regular_price.value}
                   place="bottom"
-                  content="Source: Venia Catalogue"
-                />
-
-                <Tooltip
-                  anchorId={item.sku}
-                  place="bottom"
-                  content="Source: Inventory data"
-                />
-
-                <Tooltip
-                  anchorId={
-                    idx + item.price_range.minimum_price.regular_price.value
-                  }
-                  place="bottom"
-                  content="Source: Venia Catalogue"
-                />
+                  content="Source: Venia Catalogue" />
 
                 <Tooltip
                   anchorId={idx + this.state.salePrice}
                   place="bottom"
-                  content="Source: Sales data"
-                />
-              </li>
+                  content="Source: Sales data" />
+
+                <Tooltip
+                  anchorId={item.sku}
+                  place="bottom"
+                  content="Source: Inventory data" />
+
+                <Tooltip
+                  anchorId={item.sku + idx}
+                  place="bottom"
+                  content="Source: Inventory data" /> 
+
+              </li></>
             ))}
           </ul>
         </div>
