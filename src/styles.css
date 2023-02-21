@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+h2 {
+  padding: 20px;
+}
+
 img {
   width: 260px;
   margin-bottom: 30px;
@@ -19,17 +23,6 @@ li {
   margin: 8px 0;
 }
 
-h1 {
-  font-weight: bold;
-  margin-bottom: 15px;
-  width: 330px;
-}
-
-h4 {
-  display: inline-block;
-  margin-right: 10px;
-}
-
 button {
   border-radius: 12px;
   background-color: blue;
@@ -38,6 +31,32 @@ button {
   height: 33px;
   margin-right: 20px;
   font-weight: 550;
+}
+
+a:link {
+  color:  rgb(178 178 178);
+  text-decoration: none;
+}
+
+a:visited {
+  color:  rgb(178 178 178);
+}
+
+a:hover {
+  color: white;
+}
+
+
+.header {
+  background-image: url(https://developer.adobe.com/graphql-mesh-gateway/static/d196a8cfb9d567947b40b894f4a86e65/fab06/home-bg.webp);
+  color: white;
+  height: 125px;
+  width: 900px;
+}
+
+.sub-header {
+  color: rgb(178 178 178);
+  font-size: medium;
 }
 
 .item-name {
@@ -53,6 +72,7 @@ button {
 .price-container {
   margin-top: -25px;
 }
+
 .price {
   display: inline-block;
   width: 30px;
