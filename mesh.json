@@ -1,55 +1,64 @@
-{
+{ 
   "meshConfig": {
-    "sources": [
-      {
-        "name": "InventoryData",
-        "handler": {
-          "graphql": {
-            "endpoint": "https://product-data-supplement.herokuapp.com/"
-          }
-        }
-      },
-      {
-        "name": "CommerceCoreGraph",
-        "transforms": [
+      "files": [
           {
-            "filterSchema": {
-              "mode": "bare",
-              "filters": [
-                "Query.!category",
-                "Query.!customerOrders",
-                "Query.!urlResolver",
-                "Query.!wishlist",
-                "Query.!categoryList",
-                "Mutation.!setPaymentMethodAndPlaceOrder",
-                "Mutation.!addBundleProductsToCart",
-                "Mutation.!addConfigurableProductsToCart",
-                "Mutation.!addDownloadableProductsToCart",
-                "Mutation.!addSimpleProductsToCart",
-                "Mutation.!addVirtualProductsToCart",
-                "Mutation.!createCustomer",
-                "Mutation.!updateCustomer"
+              "path": "./demoResponse.json",
+              "content": "{\n    \"products\": [\n        {\n            \"location\": \"Warehouse A\",\n            \"price\": 9.99,\n            \"quantity\": 21,\n            \"sku\": \"va\",\n            \"ziocode\": 785585\n        }\n    ]\n}"
+          },
+          {
+              "path": "./additional-resolvers.js",
+              "content": " const resolvers = {\n  SimpleProduct: {\n    demoDetails: {\n      selectionSet: /* GraphQL */ `\n        {\n          sku\n        }\n      `,\n      resolve(root, _args, context, info) {\n        return context.Pricing.Query.demo({\n          root,\n          args: {\n            skus: `${root.sku}`\n          },\n          context,\n          info,\n          selectionSet: \"{ products { sku location quantity } }\"\n        }).then((response) => { \n            return response.products.filter((product) => product.sku === root.sku)[0];\n        })\n      }\n    }\n  }\n}\n\nmodule.exports = {\n    resolvers\n}\n "
+          }
+      ],
+      "responseConfig": {
+          "CORS": {
+              "methods": [
+                  "GET",
+                  "POST"
+              ],
+              "origin": [
+                  "http://localhost:3000",
+                  "https://tpog71-3000.preview.csb.app",
+                  "https://96vivc-3000.preview.csb.app",
+                  "https://codesandbox.io"
               ]
-            }
           }
-        ],
-        "handler": {
-          "graphql": {
-            "endpoint": "https://venia.magento.com/graphql/"
+      },
+      "sources": [
+          {
+              "name": "MagentoMonolithApi",
+              "handler": {
+                  "graphql": {
+                      "endpoint": "https://venia.magento.com/graphql"
+                  }
+              }
+          },
+          {
+              "name": "Pricing",
+              "handler": {
+                  "JsonSchema": {
+                      "baseUrl": "https://adobeioruntime.net/api/v1/web/283976-319tealcat-stage/default",
+                      "operations": [
+                          {
+                              "path": "/demo?skus={args.skus}",
+                              "argTypeMap": {
+                                  "skus": {
+                                      "type": "string"
+                                  }
+                              },
+                              "responseSample": "./demoResponse.json",
+                              "type": "Query",
+                              "field": "demo",
+                              "method": "GET"
+                          }
+                      ]
+                  }
+              }
           }
-        }
-      }
-    ],
-    "responseConfig": {
-      "CORS": {
-        "methods": ["GET", "POST"],
-        "origin": [
-          "https://fiddle.jshell.net",
-          "https://cdpn.io",
-          "https://codesandbox.io/",
-          "https://9y73y7.csb.app"
-        ]
-      }
-    }
+      ],
+      "additionalTypeDefs": "extend type SimpleProduct {\n    demoDetails: query_demo_products_items \n}\n",
+      "additionalResolvers": [
+          "./additional-resolvers.js"
+      ]
   }
 }

@@ -38,15 +38,10 @@ a:link {
   text-decoration: none;
 }
 
-a:visited {
-  color:  rgb(178 178 178);
+.nav {
+  width: 1720px;
+  margin-bottom: 0px;
 }
-
-a:hover {
-  color: white;
-}
-
-
 .header {
   background-image: url(https://developer.adobe.com/graphql-mesh-gateway/static/d196a8cfb9d567947b40b894f4a86e65/fab06/home-bg.webp);
   color: white;
@@ -55,8 +50,9 @@ a:hover {
 }
 
 .sub-header {
-  color: rgb(178 178 178);
+  color: lightblue;
   font-size: medium;
+  float: right;
 }
 
 .item-name {
