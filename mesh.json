@@ -7,7 +7,7 @@
           },
           {
               "path": "./additional-resolvers.js",
-              "content": " const resolvers = {\n  SimpleProduct: {\n    demoDetails: {\n      selectionSet: /* GraphQL */ `\n        {\n          sku\n        }\n      `,\n      resolve(root, _args, context, info) {\n        return context.Pricing.Query.demo({\n          root,\n          args: {\n            skus: `${root.sku}`\n          },\n          context,\n          info,\n          selectionSet: \"{ products { sku location quantity } }\"\n        }).then((response) => { \n            return response.products.filter((product) => product.sku === root.sku)[0];\n        })\n      }\n    }\n  }\n}\n\nmodule.exports = {\n    resolvers\n}\n "
+              "content": " const resolvers = {\n  SimpleProduct: {\n    demoDetails: {\n      selectionSet: /* GraphQL */ `\n        {\n          sku\n        }\n      `,\n      resolve(root, _args, context, info) {\n        return context.Pricing.Query.demo({\n          root,\n          args: {\n            skus: `${root.sku}`\n          },\n          context,\n          info,\n          selectionSet: \"{ products { sku location quantity ziocode price } }\"\n        }).then((response) => { \n            return response.products.filter((product) => product.sku === root.sku)[0];\n        })\n      }\n    }\n  }\n}\n\nmodule.exports = {\n    resolvers\n}\n "
           }
       ],
       "responseConfig": {
@@ -20,6 +20,7 @@
                   "http://localhost:3000",
                   "https://tpog71-3000.preview.csb.app",
                   "https://96vivc-3000.preview.csb.app",
+                  "https://cnkg7m-3000.preview.csb.app",
                   "https://codesandbox.io"
               ]
           }

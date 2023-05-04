@@ -90,3 +90,24 @@ a:link {
 input {
   margin-right: 5px;
 }
+
+.code-sidebar {
+  background-color: black;
+  color: white;
+  width: 500px;
+  height: 900px;
+  overflow: scroll;  
+}
+
+.results {
+  display: flex;
+  justify-content:space-between;
+}
+
+.code-toggle {
+  color: #ff0000;
+  font-size: large;
+  cursor: pointer;
+  float: right;
+  margin: 10px 10px;
+}
