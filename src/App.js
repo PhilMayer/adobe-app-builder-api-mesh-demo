@@ -46,7 +46,7 @@ class APIMeshExample extends React.Component {
         <div>
           <p className="sub-header"><a href="https://adobe.enterprise.slack.com/files/T025FJ55H/F04G1VALPH9">&#128214;  How to set up App Builder and API Mesh</a></p>
           <img className="nav" src="nav.png"/>
-          <h2>Your API Mesh query results</h2>
+          <h2>Your search results</h2>
             
           
           <ul>
