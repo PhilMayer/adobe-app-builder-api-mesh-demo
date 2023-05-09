@@ -54,7 +54,7 @@ class APIMeshExample extends React.Component {
               <ul>
                 {this.state.products.map((item, idx) => (
                   <>
-                  <li key={item.sku}>
+                  <li id={idx} key={item.sku}>
                   <img id={item.image.url} src={item.image.url} />
                     <p className="item-name auto-width" id={item.name}>{item.name}</p>
 
@@ -125,7 +125,7 @@ class APIMeshExample extends React.Component {
               </ul>
             </div>
             <div>
-              <CodeSidebar codeSamples={this.state.apiMeshRes}/>
+              <CodeSidebar meshResponse={this.state.apiMeshRes}/>
             </div>
           </div>
         </div>
