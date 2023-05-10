@@ -17,7 +17,7 @@ const CodeSidebar = ({ meshResponse }) => {
   return (
     <div className='results'>
         <div className={isMeshResponseVisible ? "code-sidebar" : ""}>
-            <div className='code-toggle' onClick={toggleMeshSidebar}><code>API Mesh Response |</code></div>
+            <div className='code-toggle' onClick={toggleMeshSidebar}><code>API Mesh Response</code></div>
             <br></br>
             {isMeshResponseVisible &&
                 <pre>
