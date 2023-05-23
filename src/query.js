@@ -1,4 +1,4 @@
-const SEARCH_TERM = "phone";
+const SEARCH_TERM = "Phone";
 const NUMBER_OF_RESULTS = 6;
 
 const query = {
@@ -23,3 +23,6 @@ const query = {
   }`
 };
 export default query;
+
+
+    

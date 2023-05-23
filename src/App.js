@@ -4,11 +4,13 @@ import React from "react";
 import { Tooltip } from "react-tooltip";
 import query from "./query.js";
 import CodeSidebar from './codeSidebar';
+import movistarProducts from './movistarProducts'
 
 const API_MESH_URL =
   "https://graph.adobe.io/api/64f754da-0c29-43a9-93bc-8099bcc858f1/graphql?api_key=cc3af46d30c240fe8903c018e799ee8b";
 
 class APIMeshExample extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -71,46 +73,36 @@ class APIMeshExample extends React.Component {
                     <button>ADD TO CART</button>
                     <span>&#9825;</span>
 
-                    {item.demoDetails ? (
-                      <div>
-                        <p className="auto-width" id={item.sku}>
-                          Items remaining: {item.demoDetails.quantity}
-                        </p>
-                        <p className="auto-width" id={item.sku + idx}>Location: {item.demoDetails.location}</p>
-                      </div>
-                    ) : (
-                      <div></div>
-                    )}
+                    
+                    <div id={item.sku + idx}>
+                      <p className="auto-width oferta">
+                        <strong>Oferta Adicional! </strong> 
+                        
+                        <a target="_blank" href={movistarProducts[Math.floor(Math.random() * 29)].data.fields.urlFicha.replace(/\\u003d/g, "=")}>{movistarProducts[Math.floor(Math.random() * 29)].name}</a>
+                      </p>
+                     
+                    </div>
+                    
                     
                     <Tooltip
                       anchorId={item.image.url}
                       place="bottom"
-                      content="Source: Venia Catalogue" />
+                      content="URL de origen: https://demo.magentosite.cloud/graphql" />
 
                     <Tooltip
                       anchorId={item.name}
                       place="bottom"
-                      content="Source: Venia Catalogue" />
+                      content="URL de origen: https://demo.magentosite.cloud/graphql" />
 
                     <Tooltip
                       anchorId={idx + item.price_range.minimum_price.regular_price.value}
                       place="bottom"
-                      content="Source: Venia Catalogue" />
-
-                    <Tooltip
-                      anchorId={idx + this.state.salePrice}
-                      place="bottom"
-                      content="Source: Sales data" />
-
-                    <Tooltip
-                      anchorId={item.sku}
-                      place="bottom"
-                      content="Source: Inventory data" />
+                      content="URL de origen: https://demo.magentosite.cloud/graphql" />
 
                     <Tooltip
                       anchorId={item.sku + idx}
                       place="bottom"
-                      content="Source: Inventory data" /> 
+                      content="URL de origen: https://orion.col.movistar.es/v1/orion/standard-api/products" /> 
 
                   </li></>
                 ))}

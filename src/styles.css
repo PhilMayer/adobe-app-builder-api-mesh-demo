@@ -34,7 +34,7 @@ button {
 }
 
 .product-image {
-  min-height: 195px;
+  height: 190px;
 }
 
 a:link {
@@ -116,4 +116,8 @@ input {
   cursor: pointer;
   float: right;
   margin: 10px 10px;
+}
+
+.oferta {
+  max-width: 265px;
 }

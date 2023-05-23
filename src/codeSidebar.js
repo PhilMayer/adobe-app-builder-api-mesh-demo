@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import restResponse from './sampleRest.json'
 import "./styles.css";
 
 const CodeSidebar = ({ meshResponse }) => {
@@ -26,15 +25,7 @@ const CodeSidebar = ({ meshResponse }) => {
             }
         </div>
 
-        <div className={isRestResponseVisible ? "code-sidebar" : ""}>
-            <div className='code-toggle' onClick={toggleRestSidebar}><code>Rest Response</code></div>
-            <br></br>
-            {isRestResponseVisible &&
-                <pre>
-                <code>{JSON.stringify(restResponse, null, 2)}</code>
-                </pre>
-            }
-        </div>
+       
     </div>
   );
 };
