@@ -5,9 +5,6 @@ import { Tooltip } from "react-tooltip";
 import query from "./query.js";
 import CodeSidebar from './codeSidebar';
 
-
-// const API_MESH_URL =
-//   "https://graph.adobe.io/api/c29aab13-2a06-41c5-8f67-5632ad62598c/graphql?api_key=077cf40dae5144ef8b799b0d53964e24";
 const API_MESH_URL =
   "https://graph.adobe.io/api/fe0779e3-2d3e-45db-b043-5c8dcf7a9f04/graphql?api_key=99f0c5c18d2249b188d92529f31ccdf1";
 
