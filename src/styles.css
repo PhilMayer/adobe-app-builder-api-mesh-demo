@@ -9,7 +9,7 @@ h2 {
 
 img {
   width: 260px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -25,12 +25,16 @@ li {
 
 button {
   border-radius: 12px;
-  background-color: blue;
+  background-color: #1979c3;
   color: white;
   width: 215px;
   height: 33px;
   margin-right: 20px;
   font-weight: 550;
+}
+
+.product-image {
+  min-height: 195px;
 }
 
 a:link {
@@ -59,6 +63,7 @@ a:link {
   font-weight: 600;
   font-family: sans-serif;
   height: 20px;
+  max-width: 270px;
 }
 
 .auto-width {
@@ -66,7 +71,7 @@ a:link {
 }
 
 .price-container {
-  margin-top: -25px;
+  padding-top: 1px;
 }
 
 .price {

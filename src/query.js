@@ -1,4 +1,4 @@
-const SEARCH_TERM = "earrings";
+const SEARCH_TERM = "phone";
 const NUMBER_OF_RESULTS = 6;
 
 const query = {
@@ -17,14 +17,6 @@ const query = {
         }
         image {
           url
-        }
-        ... on SimpleProduct {
-          demoDetails {
-            
-            sku
-            location
-            quantity
-          }
         }
       }
     }

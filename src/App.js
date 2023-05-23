@@ -6,7 +6,7 @@ import query from "./query.js";
 import CodeSidebar from './codeSidebar';
 
 const API_MESH_URL =
-  "https://graph.adobe.io/api/fe0779e3-2d3e-45db-b043-5c8dcf7a9f04/graphql?api_key=99f0c5c18d2249b188d92529f31ccdf1";
+  "https://graph.adobe.io/api/64f754da-0c29-43a9-93bc-8099bcc858f1/graphql?api_key=cc3af46d30c240fe8903c018e799ee8b";
 
 class APIMeshExample extends React.Component {
   constructor(props) {
@@ -43,8 +43,8 @@ class APIMeshExample extends React.Component {
     return (
       <>
         <div>
-          <img className="nav" src="nav.png"/>
-          <h2>Your search results</h2>
+          <img className="nav" src="movistar.png"/>
+          <h2>Mi Movistar</h2>
             
           <div className="results">
             <div>
@@ -52,20 +52,15 @@ class APIMeshExample extends React.Component {
                 {this.state.products.map((item, idx) => (
                   <>
                   <li id={idx} key={item.sku}>
-                  <img id={item.image.url} src={item.image.url} />
+                  <img id={item.image.url} className="product-image" src={item.image.url} />
                     <p className="item-name auto-width" id={item.name}>{item.name}</p>
 
                     {this.state.salePrice ? (
                       <div className="price-container">
-                        <p
-                          className="price strike"
-                          id={idx + item.price_range.minimum_price.regular_price.value}
-                        >
+                        <p id={idx + item.price_range.minimum_price.regular_price.value}>
                           ${item.price_range.minimum_price.regular_price.value}
                         </p>
-                        <p className="price sale" id={idx + this.state.salePrice}>
-                          ${this.state.salePrice}
-                        </p>
+                       
                       </div>
                     ) : (
                       <p id="price">
