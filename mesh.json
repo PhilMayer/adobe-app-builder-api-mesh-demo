@@ -1,65 +1,57 @@
-{ 
-  "meshConfig": {
-      "files": [
-          {
-              "path": "./demoResponse.json",
-              "content": "{\n    \"products\": [\n        {\n            \"location\": \"Warehouse A\",\n            \"price\": 9.99,\n            \"quantity\": 21,\n            \"sku\": \"va\",\n            \"ziocode\": 785585\n        }\n    ]\n}"
-          },
-          {
-              "path": "./additional-resolvers.js",
-              "content": " const resolvers = {\n  SimpleProduct: {\n    demoDetails: {\n      selectionSet: /* GraphQL */ `\n        {\n          sku\n        }\n      `,\n      resolve(root, _args, context, info) {\n        return context.Pricing.Query.demo({\n          root,\n          args: {\n            skus: `${root.sku}`\n          },\n          context,\n          info,\n          selectionSet: \"{ products { sku location quantity ziocode price } }\"\n        }).then((response) => { \n            return response.products.filter((product) => product.sku === root.sku)[0];\n        })\n      }\n    }\n  }\n}\n\nmodule.exports = {\n    resolvers\n}\n "
-          }
-      ],
-      "responseConfig": {
-          "CORS": {
-              "methods": [
-                  "GET",
-                  "POST"
-              ],
-              "origin": [
-                  "http://localhost:3000",
-                  "https://tpog71-3000.preview.csb.app",
-                  "https://96vivc-3000.preview.csb.app",
-                  "https://cnkg7m-3000.preview.csb.app",
-                  "https://codesandbox.io"
-              ]
-          }
-      },
-      "sources": [
-          {
-              "name": "MagentoMonolithApi",
-              "handler": {
-                  "graphql": {
-                      "endpoint": "https://venia.magento.com/graphql"
-                  }
-              }
-          },
-          {
-              "name": "Pricing",
-              "handler": {
-                  "JsonSchema": {
-                      "baseUrl": "https://adobeioruntime.net/api/v1/web/283976-319tealcat-stage/default",
-                      "operations": [
-                          {
-                              "path": "/demo?skus={args.skus}",
-                              "argTypeMap": {
-                                  "skus": {
-                                      "type": "string"
-                                  }
-                              },
-                              "responseSample": "./demoResponse.json",
-                              "type": "Query",
-                              "field": "demo",
-                              "method": "GET"
-                          }
-                      ]
-                  }
-              }
-          }
-      ],
-      "additionalTypeDefs": "extend type SimpleProduct {\n    demoDetails: query_demo_products_items \n}\n",
-      "additionalResolvers": [
-          "./additional-resolvers.js"
-      ]
-  }
+{
+    "meshConfig": {
+        "files": [
+            {
+                "path": "./demoResponse.json",
+                "content": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"responseList\": {\n      \"type\": \"array\",\n      \"items\": [\n        {\n          \"type\": \"object\",\n          \"properties\": {\n            \"name\": \"string\",\n            \"alias\": {\n              \"type\": \"string\"\n            },\n            \"description\": {\n              \"type\": \"string\"\n            },\n            \"baseOffer\": {\n              \"type\": \"null\"\n            },\n            \"productTaxonomy\": {\n              \"type\": \"null\"\n            },\n            \"categories\": {\n              \"type\": \"array\",\n              \"items\": {}\n            },\n            \"offers\": {\n              \"type\": \"object\"\n            },\n            \"children\": {\n              \"type\": \"object\"\n            },\n            \"activationRule\": {\n              \"type\": \"null\"\n            },\n            \"ionCode\": {\n              \"type\": \"null\"\n            },\n            \"productOffering\": {\n              \"type\": \"null\"\n            },\n            \"data\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"fields\": {\n                  \"type\": \"object\",\n                  \"properties\": {\n                    \"bandaContratado\": {\n                      \"type\": \"string\"\n                    },\n                    \"claim\": {\n                      \"type\": \"string\"\n                    },\n                    \"claseLogo\": {\n                      \"type\": \"string\"\n                    },\n                    \"codServComercial\": {\n                      \"type\": \"string\"\n                    },\n                    \"colorIcono\": {\n                      \"type\": \"string\"\n                    },\n                    \"contratado\": {\n                      \"type\": \"string\"\n                    },\n                    \"dial\": {\n                      \"type\": \"string\"\n                    },\n                    \"icono\": {\n                      \"type\": \"string\"\n                    },\n                    \"icono_TV\": {\n                      \"type\": \"string\"\n                    },\n                    \"mostrar_configTV\": {\n                      \"type\": \"string\"\n                    },\n                    \"nombreComercial\": {\n                      \"type\": \"string\"\n                    },\n                    \"urlFicha\": {\n                      \"type\": \"string\"\n                    },\n                    \"urlProdCompra\": {\n                      \"type\": \"string\"\n                    },\n                    \"iconList\": {\n                      \"type\": \"array\",\n                      \"items\": [\n                        {\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"type\": \"string\"\n                        },\n                        {\n                          \"type\": \"string\"\n                        }\n                      ]\n                    }\n                  },\n                  \"required\": [\n                    \"bandaContratado\",\n                    \"claim\",\n                    \"claseLogo\",\n                    \"codServComercial\",\n                    \"colorIcono\",\n                    \"contratado\",\n                    \"dial\",\n                    \"icono\",\n                    \"icono_TV\",\n                    \"mostrar_configTV\",\n                    \"nombreComercial\",\n                    \"urlFicha\",\n                    \"urlProdCompra\",\n                    \"iconList\"\n                  ]\n                },\n                \"alias\": {\n                  \"type\": \"string\"\n                },\n                \"name\": {\n                  \"type\": \"string\"\n                },\n                \"id\": {\n                  \"type\": \"string\"\n                }\n              },\n              \"required\": [\n                \"fields\",\n                \"alias\",\n                \"name\",\n                \"id\"\n              ]\n            },\n            \"id\": {\n              \"type\": \"string\"\n            }\n          },\n          \"required\": [\n            \"name\",\n            \"alias\",\n            \"description\",\n            \"baseOffer\",\n            \"productTaxonomy\",\n            \"categories\",\n            \"offers\",\n            \"children\",\n            \"activationRule\",\n            \"ionCode\",\n            \"productOffering\",\n            \"data\",\n            \"id\"\n          ]\n        }\n      ]\n    },\n    \"storableCursor\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"pageIndex\": {\n          \"type\": \"integer\"\n        },\n        \"pageSize\": {\n          \"type\": \"integer\"\n        },\n        \"totalNumberOfElements\": {\n          \"type\": \"integer\"\n        },\n        \"totalNumberOfPages\": {\n          \"type\": \"integer\"\n        },\n        \"hasNext\": {\n          \"type\": \"boolean\"\n        },\n        \"hasPrevious\": {\n          \"type\": \"boolean\"\n        }\n      },\n      \"required\": [\n        \"pageIndex\",\n        \"pageSize\",\n        \"totalNumberOfElements\",\n        \"totalNumberOfPages\",\n        \"hasNext\",\n        \"hasPrevious\"\n      ]\n    }\n  }\n}"
+            }
+        ],
+        "responseConfig": {
+            "CORS": {
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "origin": [
+                    "http://localhost:3000",
+                    "https://codesandbox.io",
+                    "https://gup2zw-3000.csb.app"
+                ]
+            }
+        },
+        "sources": [
+            {
+                "name": "MovistarCommerce",
+                "handler": {
+                    "graphql": {
+                        "endpoint": "https://pwa-alt2-3r3zcby-hn5a6glrbvlq2.demo.magentosite.cloud/graphql"
+                    }
+                }
+            },
+            {
+                "name": "MovistarAPI",
+                "handler": {
+                    "JsonSchema": {
+                        "baseUrl": "https://orion.col.movistar.es/v1/orion/standard-api/products",
+                        "operations": [
+                            {
+                                "path": "/list?name={args.name}",
+                                "argTypeMap": {
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "responseSample": "./demoResponse.json",
+                                "type": "Query",
+                                "field": "movistar",
+                                "method": "GET"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
 }
+
+  
