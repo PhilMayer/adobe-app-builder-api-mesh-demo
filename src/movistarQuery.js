@@ -1,3 +1,5 @@
+const SEARCH_TERM = "Phone";
+
 const query = {
     query: `{
       products(search: "${SEARCH_TERM}") {
