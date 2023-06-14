@@ -7,7 +7,7 @@ import CodeSidebar from './codeSidebar';
 import movistarProducts from './movistarProducts'
 
 const API_MESH_URL =
-  "https://graph.adobe.io/api/64f754da-0c29-43a9-93bc-8099bcc858f1/graphql?api_key=cc3af46d30c240fe8903c018e799ee8b";
+  "https://graph.adobe.io/api/3c5f3116-2b2b-45dc-9cff-0bb931791904/graphql?api_key=758a0d3cba5649208dc67c78db1d58f8";
 
 class APIMeshExample extends React.Component {
   
