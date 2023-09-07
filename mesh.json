@@ -27,7 +27,7 @@
       },
       "sources": [
           {
-              "name": "MagentoMonolithApi",
+              "name": "CommerceFoundationAPI",
               "handler": {
                   "graphql": {
                       "endpoint": "https://venia.magento.com/graphql"
