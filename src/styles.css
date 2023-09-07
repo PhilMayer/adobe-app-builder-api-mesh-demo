@@ -5,6 +5,7 @@
 
 h2 {
   padding: 20px;
+  font-family: sans-serif;
 }
 
 img {
@@ -31,6 +32,7 @@ button {
   height: 33px;
   margin-right: 20px;
   font-weight: 550;
+  font-family: sans-serif;
 }
 
 a:link {
@@ -70,6 +72,7 @@ a:link {
 }
 
 .price {
+  font-family: sans-serif;
   display: inline-block;
   width: 30px;
 }
@@ -84,6 +87,7 @@ a:link {
 }
 
 .sale {
+  font-family: sans-serif;
   color: red;
 }
 
