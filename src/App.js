@@ -90,32 +90,32 @@ class APIMeshExample extends React.Component {
                     <Tooltip
                       anchorId={item.image.url}
                       place="bottom"
-                      content="Source: Venia Catalogue" />
+                      content="Source: Adobe Commerce" />
 
                     <Tooltip
                       anchorId={item.name}
                       place="bottom"
-                      content="Source: Venia Catalogue" />
+                      content="Source: Adobe Commerce" />
 
                     <Tooltip
                       anchorId={idx + item.price_range.minimum_price.regular_price.value}
                       place="bottom"
-                      content="Source: Venia Catalogue" />
+                      content="Source: Adobe Commerce" />
 
                     <Tooltip
                       anchorId={idx + this.state.salePrice}
                       place="bottom"
-                      content="Source: Sales data" />
+                      content="Source: ERP" />
 
                     <Tooltip
                       anchorId={item.sku}
                       place="bottom"
-                      content="Source: Inventory data" />
+                      content="Source: ERP" />
 
                     <Tooltip
                       anchorId={item.sku + idx}
                       place="bottom"
-                      content="Source: Inventory data" /> 
+                      content="Source: ERP" /> 
 
                   </li></>
                 ))}

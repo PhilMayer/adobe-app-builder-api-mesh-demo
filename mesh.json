@@ -29,7 +29,7 @@
         },
         "sources": [
             {
-                "name": "CommerceFoundationAPI",
+                "name": "CommerceAPI",
                 "handler": {
                     "graphql": {
                         "endpoint": "https://wellness-mag238.adobedemo.com/graphql"

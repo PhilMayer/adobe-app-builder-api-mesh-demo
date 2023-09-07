@@ -1,161 +1,115 @@
 {
-   "LocationServiceAPI": [
-       {
-        "sku": "VA12-SI-NA",
-        "location": "Warehouse C",
-        "quantity": 34
-        },
+  "LocationServiceAPI": [
+    {
+      "sku": "VA12-SI-NA",
+      "location": "Warehouse C",
+      "quantity": 34
+    },
+    {
+      "sku": "VA18-GO-NA",
+      "location": "Warehouse B",
+      "quantity": 10
+    },
+    {
+      "sku": "VA16-GO-NA",
+      "location": "Warehouse D",
+      "quantity": 2
+    },
+    {
+      "sku": "VA11-GO-NA",
+      "location": "Warehouse A",
+      "quantity": 10
+    },
+    {
+      "sku": "VA15-SI-NA",
+      "location": "Warehouse D",
+      "quantity": 10
+    },
+    {
+      "sku": "VA17-SI-NA",
+      "location": "Warehouse B",
+      "quantity": 5
+    }
+  ],
+  "AdobeCommerceAPI": {
+    "products": {
+      "items": [
         {
-        "sku": "VA18-GO-NA",
-        "location": "Warehouse B",
-        "quantity": 10
-        },
-        {
-        "sku": "VA16-GO-NA",
-        "location": "Warehouse D",
-        "quantity": 2
-        },
-        {
-        "sku": "VA11-GO-NA",
-        "location": "Warehouse A",
-        "quantity": 10
-        },
-        {
-        "sku": "VA15-SI-NA",
-        "location": "Warehouse D",
-        "quantity": 10
-        },
-        {
-        "sku": "VA17-SI-NA",
-        "location": "Warehouse B",
-        "quantity": 5
-        }
-    ],
-    
-    "AdobeCommerceAPI": {
-        "products": {
-          "items": [
-            {
-              "name": "Augusta Earrings",
-              "sku": "VA12-SI-NA",
-              "price_range": {
-                "minimum_price": {
-                  "regular_price": {
-                    "value": 78,
-                    "currency": "USD"
-                  }
-                }
-              },
-              "image": {
-                "url": "https://jnz3dtiuj77ca.dummycachetest.com/media/catalog/product/cache/6e1cf7b8bcbe772e1a0e2f5447e60359/v/a/va12-ts_main.jpg"
-              }
-            },
-            {
-              "name": "Gold Cirque Earrings",
-              "sku": "VA18-GO-NA",
-              "price_range": {
-                "minimum_price": {
-                  "regular_price": {
-                    "value": 68,
-                    "currency": "USD"
-                  }
-                }
-              },
-              "image": {
-                "url": "https://jnz3dtiuj77ca.dummycachetest.com/media/catalog/product/cache/6e1cf7b8bcbe772e1a0e2f5447e60359/v/a/va18-go_main.jpg"
-              }
-            },
-            {
-              "name": "Gold Sol Earrings",
-              "sku": "VA16-GO-NA",
-              "price_range": {
-                "minimum_price": {
-                  "regular_price": {
-                    "value": 48,
-                    "currency": "USD"
-                  }
-                }
-              },
-              "image": {
-                "url": "https://jnz3dtiuj77ca.dummycachetest.com/media/catalog/product/cache/6e1cf7b8bcbe772e1a0e2f5447e60359/v/a/va16-go_main.jpg"
-              }
-            },
-            {
-              "name": "Carmina Earrings",
-              "sku": "VA11-GO-NA",
-              "price_range": {
-                "minimum_price": {
-                  "regular_price": {
-                    "value": 58,
-                    "currency": "USD"
-                  }
-                }
-              },
-              "image": {
-                "url": "https://jnz3dtiuj77ca.dummycachetest.com/media/catalog/product/cache/6e1cf7b8bcbe772e1a0e2f5447e60359/v/a/va11-sg_main.jpg"
-              }
-            },
-            {
-              "name": "Night Out Collection",
-              "sku": "VA24",
-              "price_range": {
-                "minimum_price": {
-                  "regular_price": {
-                    "value": 196,
-                    "currency": "USD"
-                  }
-                }
-              },
-              "image": {
-                "url": "https://jnz3dtiuj77ca.dummycachetest.com/media/catalog/product/cache/6e1cf7b8bcbe772e1a0e2f5447e60359/v/a/va24_main.jpg"
-              }
-            },
-            {
-              "name": "Silver Sol Earrings",
-              "sku": "VA15-SI-NA",
-              "price_range": {
-                "minimum_price": {
-                  "regular_price": {
-                    "value": 48,
-                    "currency": "USD"
-                  }
-                }
-              },
-              "image": {
-                "url": "https://jnz3dtiuj77ca.dummycachetest.com/media/catalog/product/cache/6e1cf7b8bcbe772e1a0e2f5447e60359/v/a/va15-si_main.jpg"
-              }
-            },
-            {
-              "name": "Silver Cirque Earrings",
-              "sku": "VA17-SI-NA",
-              "price_range": {
-                "minimum_price": {
-                  "regular_price": {
-                    "value": 68,
-                    "currency": "USD"
-                  }
-                }
-              },
-              "image": {
-                "url": "https://jnz3dtiuj77ca.dummycachetest.com/media/catalog/product/cache/6e1cf7b8bcbe772e1a0e2f5447e60359/v/a/va17-si_main.jpg"
-              }
-            },
-            {
-              "name": "Augusta Trio",
-              "sku": "VA23",
-              "price_range": {
-                "minimum_price": {
-                  "regular_price": {
-                    "value": 78,
-                    "currency": "USD"
-                  }
-                }
-              },
-              "image": {
-                "url": "https://jnz3dtiuj77ca.dummycachetest.com/media/catalog/product/cache/6e1cf7b8bcbe772e1a0e2f5447e60359/v/a/va23_main.jpg"
+          "name": "Cough Drops (Cherry)",
+          "sku": "UHI123004",
+          "price_range": {
+            "minimum_price": {
+              "regular_price": {
+                "value": 3,
+                "currency": "USD"
               }
             }
-          ]
+          },
+          "image": {
+            "url": "https://mag238.adobedemo.com/media/catalog/product/cache/0031f4c146bf54cdfa5382f262245b6b/c/h/cherry.jpeg"
+          }
+        },
+        {
+          "name": "Cough Drops (Strawberry)",
+          "sku": "UHI123003",
+          "price_range": {
+            "minimum_price": {
+              "regular_price": {
+                "value": 3,
+                "currency": "USD"
+              }
+            }
+          },
+          "image": {
+            "url": "https://mag238.adobedemo.com/media/catalog/product/cache/0031f4c146bf54cdfa5382f262245b6b/s/t/strawberry.jpg"
+          }
+        },
+        {
+          "name": "Cough Drops (Watermelon)",
+          "sku": "UHI123002",
+          "price_range": {
+            "minimum_price": {
+              "regular_price": {
+                "value": 3,
+                "currency": "USD"
+              }
+            }
+          },
+          "image": {
+            "url": "https://mag238.adobedemo.com/media/catalog/product/cache/0031f4c146bf54cdfa5382f262245b6b/w/a/watermelon.jpeg"
+          }
+        },
+        {
+          "name": "Cough Drops (Honey Lemon)",
+          "sku": "UHI123001",
+          "price_range": {
+            "minimum_price": {
+              "regular_price": {
+                "value": 3,
+                "currency": "USD"
+              }
+            }
+          },
+          "image": {
+            "url": "https://mag238.adobedemo.com/media/catalog/product/cache/0031f4c146bf54cdfa5382f262245b6b/h/o/honey.jpeg"
+          }
+        },
+        {
+          "name": "Cough Drops (Variety Pack)",
+          "sku": "UHI123005",
+          "price_range": {
+            "minimum_price": {
+              "regular_price": {
+                "value": 12,
+                "currency": "USD"
+              }
+            }
+          },
+          "image": {
+            "url": "https://mag238.adobedemo.com/media/catalog/product/cache/0031f4c146bf54cdfa5382f262245b6b/b/u/bundle.jpg"
+          }
         }
-      }
+      ]
+    }
+  }
 }
