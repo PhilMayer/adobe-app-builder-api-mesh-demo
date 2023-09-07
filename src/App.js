@@ -6,7 +6,7 @@ import query from "./query.js";
 import CodeSidebar from './codeSidebar';
 
 const API_MESH_URL =
-  "https://graph.adobe.io/api/3c5f3116-2b2b-45dc-9cff-0bb931791904/graphql?api_key=758a0d3cba5649208dc67c78db1d58f8";
+  "https://graph.adobe.io/api/3f27897d-5eea-4d61-b3ad-9f43c885d24f/graphql?api_key=411ca26f6df84e89919e90397925a9d6";
 
 class APIMeshExample extends React.Component {
   constructor(props) {
