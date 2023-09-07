@@ -5,6 +5,10 @@ import { Tooltip } from "react-tooltip";
 import query from "./query.js";
 import CodeSidebar from './codeSidebar';
 
+const USDollar = new Intl.NumberFormat("en-US", {
+  style: 'currency',
+  currency: 'USD',
+})
 const API_MESH_URL =
   "https://graph.adobe.io/api/3f27897d-5eea-4d61-b3ad-9f43c885d24f/graphql?api_key=411ca26f6df84e89919e90397925a9d6";
 
@@ -17,6 +21,8 @@ class APIMeshExample extends React.Component {
       salePrice: 0.5
     };
   }
+
+ 
 
   componentDidMount() {
     let options = {
@@ -64,7 +70,7 @@ class APIMeshExample extends React.Component {
                           ${item.price_range.minimum_price.regular_price.value}
                         </p>
                         <p className="price sale" id={idx + this.state.salePrice}>
-                          ${item.price_range.minimum_price.regular_price.value * this.state.salePrice}
+                          {USDollar.format(item.price_range.minimum_price.regular_price.value * this.state.salePrice)}
                         </p>
                       </div>
                     ) : (
