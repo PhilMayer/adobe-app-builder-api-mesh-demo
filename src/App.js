@@ -14,7 +14,7 @@ class APIMeshExample extends React.Component {
     this.state = {
       apiMeshRes: '',
       products: [],
-      salePrice: 55
+      salePrice: 0.5
     };
   }
 
@@ -43,7 +43,7 @@ class APIMeshExample extends React.Component {
     return (
       <>
         <div>
-          <img className="nav" src="nav.png"/>
+          <img className="nav" src="weHealthcareLogo.png"/>
           <h2>Your search results</h2>
             
           <div className="results">
@@ -64,7 +64,7 @@ class APIMeshExample extends React.Component {
                           ${item.price_range.minimum_price.regular_price.value}
                         </p>
                         <p className="price sale" id={idx + this.state.salePrice}>
-                          ${this.state.salePrice}
+                          ${item.price_range.minimum_price.regular_price.value * this.state.salePrice}
                         </p>
                       </div>
                     ) : (
