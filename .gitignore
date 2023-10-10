@@ -2,3 +2,6 @@ node_modules
 yarn-error.log
 response.json
 telefonica.json
+.env
+.aio
+APIMeshOnCodeSandbox-285361-com753.json

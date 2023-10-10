@@ -22,7 +22,7 @@ class APIMeshExample extends React.Component {
     };
   }
 
- 
+
 
   componentDidMount() {
     let options = {
@@ -49,86 +49,93 @@ class APIMeshExample extends React.Component {
     return (
       <>
         <div>
-          <img className="nav" src="weHealthcareLogo.png"/>
+          <img className="nav" src="weHealthcareLogo.png" />
           <h2>Your search results</h2>
-            
+
           <div className="results">
             <div>
               <ul>
                 {this.state.products.map((item, idx) => (
                   <>
-                  <li id={idx} key={item.sku}>
-                  <img id={item.image.url} src={item.image.url} />
-                    <p className="item-name auto-width" id={item.name}>{item.name}</p>
+                    <li id={idx} key={item.sku}>
+                      <img id={item.image.url} src={item.image.url} />
+                      <p className="item-name auto-width" id={item.name}>{item.name}</p>
 
-                    {this.state.salePrice ? (
-                      <div className="price-container">
-                        <p
-                          className="price strike"
-                          id={idx + item.price_range.minimum_price.regular_price.value}
-                        >
+                      {this.state.salePrice ? (
+                        <div className="price-container">
+                          <p
+                            className="price strike"
+                            id={idx + item.price_range.minimum_price.regular_price.value}
+                          >
+                            ${item.price_range.minimum_price.regular_price.value}
+                          </p>
+                          <p className="price sale" id={idx + this.state.salePrice}>
+                            {USDollar.format(item.price_range.minimum_price.regular_price.value * this.state.salePrice)}
+                          </p>
+                        </div>
+                      ) : (
+                        <p id="price">
                           ${item.price_range.minimum_price.regular_price.value}
                         </p>
-                        <p className="price sale" id={idx + this.state.salePrice}>
-                          {USDollar.format(item.price_range.minimum_price.regular_price.value * this.state.salePrice)}
-                        </p>
-                      </div>
-                    ) : (
-                      <p id="price">
-                        ${item.price_range.minimum_price.regular_price.value}
-                      </p>
-                    )}
+                      )}
 
-                    <button>ADD TO CART</button>
-                    <span>&#9825;</span>
+                      <button>ADD TO CART</button>
+                      <span>&#9825;</span>
+             
+                      {item.demoDetails ? (
+                        <div>
+                          <p className="auto-width" id={item.sku}>
+                            Items remaining: {item.demoDetails.quantity}
+                          </p>
+                          <p className="auto-width" id={item.sku + idx}>Ships from: {item.demoDetails.location}</p>
+                        </div>
+                      ) : (
+                        <div>
+                          <p className="auto-width" id={item.sku}>
+                            Items remaining: {Math.floor(Math.random() * 10) + 1}
+                          </p>
+                          <p className="auto-width" id={item.sku + idx}>Ships from: Tucson, AZ</p>
+                        </div>
+                      )}
 
-                    {item.demoDetails ? (
-                      <div>
-                        <p className="auto-width" id={item.sku}>
-                          Items remaining: {item.demoDetails.quantity}
-                        </p>
-                        <p className="auto-width" id={item.sku + idx}>Location: {item.demoDetails.location}</p>
-                      </div>
-                    ) : (
-                      <div></div>
-                    )}
-                    
-                    <Tooltip
-                      anchorId={item.image.url}
-                      place="bottom"
-                      content="Source: Adobe Commerce" />
 
-                    <Tooltip
-                      anchorId={item.name}
-                      place="bottom"
-                      content="Source: Adobe Commerce" />
 
-                    <Tooltip
-                      anchorId={idx + item.price_range.minimum_price.regular_price.value}
-                      place="bottom"
-                      content="Source: Adobe Commerce" />
+                      <Tooltip
+                        anchorId={item.image.url}
+                        place="bottom"
+                        content="Source: Adobe Commerce" />
 
-                    <Tooltip
-                      anchorId={idx + this.state.salePrice}
-                      place="bottom"
-                      content="Source: ERP" />
+                      <Tooltip
+                        anchorId={item.name}
+                        place="bottom"
+                        content="Source: Adobe Commerce" />
 
-                    <Tooltip
-                      anchorId={item.sku}
-                      place="bottom"
-                      content="Source: ERP" />
+                      <Tooltip
+                        anchorId={idx + item.price_range.minimum_price.regular_price.value}
+                        place="bottom"
+                        content="Source: Adobe Commerce" />
 
-                    <Tooltip
-                      anchorId={item.sku + idx}
-                      place="bottom"
-                      content="Source: ERP" /> 
+                      <Tooltip
+                        anchorId={idx + this.state.salePrice}
+                        place="bottom"
+                        content="Source: ERP" />
 
-                  </li></>
+                      <Tooltip
+                        anchorId={item.sku}
+                        place="bottom"
+                        content="Source: ERP" />
+
+                      <Tooltip
+                        anchorId={item.sku + idx}
+                        place="bottom"
+                        content="Source: ERP" />
+
+                    </li></>
                 ))}
               </ul>
             </div>
             <div>
-              <CodeSidebar meshResponse={this.state.apiMeshRes}/>
+              <CodeSidebar meshResponse={this.state.apiMeshRes} />
             </div>
           </div>
         </div>
