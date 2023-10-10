@@ -8,13 +8,18 @@ import CodeSidebar from './codeSidebar';
 const API_MESH_URL =
   "https://graph.adobe.io/api/3c5f3116-2b2b-45dc-9cff-0bb931791904/graphql?api_key=758a0d3cba5649208dc67c78db1d58f8";
 
+  const USDollar = new Intl.NumberFormat("en-US", {
+    style: 'currency',
+    currency: 'USD',
+  })
+
 class APIMeshExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       apiMeshRes: '',
       products: [],
-      salePrice: 55
+      salePrice: 0.5
     };
   }
 
@@ -64,7 +69,7 @@ class APIMeshExample extends React.Component {
                           ${item.price_range.minimum_price.regular_price.value}
                         </p>
                         <p className="price sale" id={idx + this.state.salePrice}>
-                          ${this.state.salePrice}
+                          {USDollar.format(item.price_range.minimum_price.regular_price.value * this.state.salePrice)}
                         </p>
                       </div>
                     ) : (

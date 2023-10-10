@@ -81,6 +81,7 @@ a:link {
 
 .strike {
   text-decoration: line-through;
+  margin-right: 7px;
 }
 
 .sale {
