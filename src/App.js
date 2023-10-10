@@ -8,10 +8,13 @@ import CodeSidebar from './codeSidebar';
 const API_MESH_URL =
   "https://graph.adobe.io/api/3c5f3116-2b2b-45dc-9cff-0bb931791904/graphql?api_key=758a0d3cba5649208dc67c78db1d58f8";
 
-  const USDollar = new Intl.NumberFormat("en-US", {
-    style: 'currency',
-    currency: 'USD',
-  })
+const SOURCE_1_NAME = "Source: Adobe Commerce"
+const SOURCE_2_NAME = "Source: ERP"
+
+const USDollar = new Intl.NumberFormat("en-US", {
+  style: 'currency',
+  currency: 'USD',
+})
 
 class APIMeshExample extends React.Component {
   constructor(props) {
@@ -95,32 +98,37 @@ class APIMeshExample extends React.Component {
                     <Tooltip
                       anchorId={item.image.url}
                       place="bottom"
-                      content="Source: Venia Catalogue" />
+                      content={SOURCE_1_NAME} />
 
                     <Tooltip
                       anchorId={item.name}
                       place="bottom"
-                      content="Source: Venia Catalogue" />
+                      content={SOURCE_1_NAME} />
 
                     <Tooltip
                       anchorId={idx + item.price_range.minimum_price.regular_price.value}
                       place="bottom"
-                      content="Source: Venia Catalogue" />
+                      content={SOURCE_1_NAME} />
 
                     <Tooltip
                       anchorId={idx + this.state.salePrice}
                       place="bottom"
-                      content="Source: Sales data" />
+                      content={SOURCE_2_NAME} />
+
+                    <Tooltip
+                      anchorId={"price"}
+                      place="bottom"
+                      content={SOURCE_1_NAME} />
 
                     <Tooltip
                       anchorId={item.sku}
                       place="bottom"
-                      content="Source: Inventory data" />
+                      content={SOURCE_2_NAME} />
 
                     <Tooltip
                       anchorId={item.sku + idx}
                       place="bottom"
-                      content="Source: Inventory data" /> 
+                      content={SOURCE_2_NAME} /> 
 
                   </li></>
                 ))}
