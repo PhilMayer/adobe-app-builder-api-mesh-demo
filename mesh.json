@@ -38,7 +38,7 @@
             "name": "AdobeCommerce",
             "handler": {
                 "graphql": {
-                    "endpoint": "https://com753.adobedemo.com/graphql"
+                    "endpoint": "https://spinco-com249.adobedemo.com/graphql"
                 }
             }
         },

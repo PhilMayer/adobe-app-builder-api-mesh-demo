@@ -10,7 +10,7 @@ const USDollar = new Intl.NumberFormat("en-US", {
   currency: 'USD',
 })
 const API_MESH_URL =
-  "https://graph.adobe.io/api/3f27897d-5eea-4d61-b3ad-9f43c885d24f/graphql?api_key=411ca26f6df84e89919e90397925a9d6";
+  "https://graph.adobe.io/api/d2015219-9609-4229-bf88-94a85c25117d/graphql?api_key=9268facd3c674ef3a25e8cd1e6e1dea9";
 
 class APIMeshExample extends React.Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class APIMeshExample extends React.Component {
     return (
       <>
         <div>
-          <img className="nav" src="weHealthcareLogo.png" />
+          <img className="nav" src="Spinco.png" />
           <h2>Your search results</h2>
 
           <div className="results">
@@ -58,7 +58,7 @@ class APIMeshExample extends React.Component {
                 {this.state.products.map((item, idx) => (
                   <>
                     <li id={idx} key={item.sku}>
-                      <img id={item.image.url} src={item.image.url} />
+                      <img className="product-image" id={item.image.url} src={item.image.url} />
                       <p className="item-name auto-width" id={item.name}>{item.name}</p>
 
                       {this.state.salePrice ? (

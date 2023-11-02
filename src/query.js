@@ -1,4 +1,4 @@
-const SEARCH_TERM = "cough";
+const SEARCH_TERM = "adhesive";
 const NUMBER_OF_RESULTS = 6;
 
 const query = {

@@ -8,11 +8,6 @@ h2 {
   font-family: sans-serif;
 }
 
-img {
-  width: 260px;
-  margin-bottom: 30px;
-}
-
 ul {
   display:grid;
   grid-template-columns: 300px 300px 300px;
@@ -61,10 +56,19 @@ a:link {
   font-weight: 600;
   font-family: sans-serif;
   height: 20px;
+  width: 250px;
+  margin-bottom: 30px;
+  /* margin-top: -20px; */
 }
 
-.auto-width {
+/* .auto-width {
   width: max-content;
+} */
+
+.product-image {
+  width:  250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .price-container {
@@ -74,7 +78,7 @@ a:link {
 .price {
   font-family: sans-serif;
   display: inline-block;
-  width: 30px;
+  width: 50px;
 }
 
 .done {
