@@ -17,18 +17,8 @@
             ],
             "origin": [
                 "http://localhost:3000",
-                "https://tpog71-3000.preview.csb.app",
-                "https://96vivc-3000.preview.csb.app",
-                "https://cnkg7m-3000.preview.csb.app",
-                "https://cnkg7m-3000.csb.app",
-                "https://tpog71-3000.csb.app",
-                "https://0h8s1k-3000.csb.app",
-                "https://weujby-3000.csb.app",
-                "https://5wod0h-3000.csb.app",
-                "https://xfvg9q-3000.csb.app",
-                "https://wmkrn9-3000.csb.app",
-                "https://dg9spl-3000.preview.csb.app",
-                "https://dg9spl-3000.csb.app",
+                "https://6xvd5k-3000.csb.app",
+                "https://q2w6qh-3000.csb.app",
                 "https://codesandbox.io"
             ]
         }
@@ -38,7 +28,9 @@
             "name": "AdobeCommerce",
             "handler": {
                 "graphql": {
-                    "endpoint": "https://spinco-com249.adobedemo.com/graphql"
+                    "endpoint": "https://spinco-com249.adobedemo.com/graphql",
+                    "operationHeaders": { "Content-Type": "application/json" }
+            
                 }
             }
         },

@@ -67,7 +67,7 @@ class APIMeshExample extends React.Component {
                             className="price strike"
                             id={idx + item.price_range.minimum_price.regular_price.value}
                           >
-                            ${item.price_range.minimum_price.regular_price.value}
+                            {USDollar.format(item.price_range.minimum_price.regular_price.value)}
                           </p>
                           <p className="price sale" id={idx + this.state.salePrice}>
                             {USDollar.format(item.price_range.minimum_price.regular_price.value * this.state.salePrice)}

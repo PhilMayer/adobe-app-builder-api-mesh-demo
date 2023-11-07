@@ -57,7 +57,7 @@ a:link {
   font-family: sans-serif;
   height: 20px;
   width: 250px;
-  margin-bottom: 30px;
+  margin-bottom: 52px;
   /* margin-top: -20px; */
 }
 
@@ -78,7 +78,7 @@ a:link {
 .price {
   font-family: sans-serif;
   display: inline-block;
-  width: 50px;
+  margin-right: 10px;
 }
 
 .done {
