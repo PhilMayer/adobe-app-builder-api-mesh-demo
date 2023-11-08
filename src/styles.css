@@ -55,9 +55,8 @@ a:link {
 .item-name {
   font-weight: 600;
   font-family: sans-serif;
-  height: 20px;
   width: 250px;
-  margin-bottom: 52px;
+  margin-bottom: 30px;
   /* margin-top: -20px; */
 }
 
