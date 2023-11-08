@@ -59,7 +59,7 @@ class APIMeshExample extends React.Component {
                   <>
                     <li id={idx} key={item.sku}>
                       <img className="product-image" id={item.image.url} src={item.image.url} />
-                      <p className="item-name auto-width" id={item.name}>{item.name}</p>
+                      <p className="item-name auto-width" id={item.name.slice(15)}>{item.name}</p>
 
                       {this.state.salePrice ? (
                         <div className="price-container">
@@ -106,7 +106,7 @@ class APIMeshExample extends React.Component {
                         content="Source: Adobe Commerce" />
 
                       <Tooltip
-                        anchorId={item.name}
+                        anchorId={item.name.slice(15)}
                         place="bottom"
                         content="Source: Adobe Commerce" />
 
