@@ -1,4 +1,4 @@
-const SEARCH_TERM = "bodea";
+const SEARCH_TERM = "blade";
 const NUMBER_OF_RESULTS = 6;
 
 const query = {

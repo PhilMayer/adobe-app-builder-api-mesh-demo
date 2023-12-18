@@ -58,7 +58,7 @@ class APIMeshExample extends React.Component {
                 {this.state.products.map((item, idx) => (
                   <>
                   <li id={idx} key={item.sku}>
-                  <img id={item.image.url} src={item.image.url} />
+                  <img className="product-image" id={item.image.url} src={item.image.url} />
                     <p className="item-name auto-width" id={idx + item.name}>{item.name}</p>
 
                     {this.state.salePrice ? (

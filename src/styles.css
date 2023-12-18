@@ -8,11 +8,6 @@ h2 {
   font-family: sans-serif;
 }
 
-img {
-  width: 260px;
-  margin-bottom: 30px;
-}
-
 ul {
   display:grid;
   grid-template-columns: 300px 300px 300px;
@@ -55,6 +50,12 @@ a:link {
   color: lightblue;
   font-size: medium;
   float: right;
+}
+
+.product-image {
+  width:  250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .item-name {
