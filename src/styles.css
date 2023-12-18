@@ -74,7 +74,8 @@ a:link {
 .price {
   font-family: sans-serif;
   display: inline-block;
-  width: 30px;
+  margin-right: 10px;
+  /* width: 30px; */
 }
 
 .done {

@@ -32,7 +32,8 @@
                 "name": "CommerceAPI",
                 "handler": {
                     "graphql": {
-                        "endpoint": "https://wellness-mag238.adobedemo.com/graphql"
+                        "endpoint": "https://com204.adobedemo.com/graphql",
+                        "operationHeaders": { "Content-Type": "application/json", "store": "bodea_us" }
                     }
                 }
             },
@@ -40,7 +41,7 @@
                 "name": "PricingAPI",
                 "handler": {
                     "JsonSchema": {
-                        "baseUrl": "bit.ly/weHealthcareERP",
+                        "baseUrl": "https://adobeioruntime.net/api/v1/web/283976-319tealcat-stage/default",
                         "operations": [
                             {
                                 "path": "/demo?skus={args.skus}",
