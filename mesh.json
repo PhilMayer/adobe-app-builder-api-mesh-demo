@@ -17,9 +17,7 @@
             ],
             "origin": [
                 "http://localhost:3000",
-                "https://6xvd5k-3000.csb.app",
-                "https://q2w6qh-3000.csb.app",
-                "https://p5xqhv-3000.csb.app",
+                "https://q6v69y-3000.csb.app",
                 "https://codesandbox.io"
             ]
         }
@@ -29,8 +27,8 @@
             "name": "AdobeCommerce",
             "handler": {
                 "graphql": {
-                    "endpoint": "https://spinco-com249.adobedemo.com/graphql",
-                    "operationHeaders": { "Content-Type": "application/json"}
+                    "endpoint": "https://com249.adobedemo.com/graphql",
+                    "operationHeaders": { "Content-Type": "application/json", "store": "FMJ"}
             
                 }
             }
