@@ -56,7 +56,8 @@ a:link {
   font-weight: 600;
   font-family: sans-serif;
   width: 250px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  min-height: 65px;
   /* margin-top: -20px; */
 }
 

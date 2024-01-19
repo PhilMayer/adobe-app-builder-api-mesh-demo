@@ -49,7 +49,7 @@ class APIMeshExample extends React.Component {
     return (
       <>
         <div>
-          <img className="nav" src="Spinco.png" />
+          <img className="nav" src="FMJ.png" />
           <h2>Your search results</h2>
 
           <div className="results">

@@ -1,4 +1,4 @@
-const SEARCH_TERM = "m";
+const SEARCH_TERM = "engagement";
 const NUMBER_OF_RESULTS = 6;
 
 const query = {
