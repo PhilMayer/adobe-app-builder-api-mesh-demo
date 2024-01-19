@@ -57,9 +57,9 @@ class APIMeshExample extends React.Component {
               <ul>
                 {this.state.products.map((item, idx) => (
                   <>
-                    <li id={idx} key={item.sku}>
+                    <li id={idx} key={item.sku.split[0]}>
                       <img className="product-image" id={item.image.url} src={item.image.url} />
-                      <p className="item-name auto-width" id={item.name.slice(15)}>{item.name}</p>
+                      <p className="item-name auto-width" id={item.name.split[0] + idx}>{item.name}</p>
 
                       {this.state.salePrice ? (
                         <div className="price-container">
@@ -84,17 +84,17 @@ class APIMeshExample extends React.Component {
              
                       {item.demoDetails ? (
                         <div>
-                          <p className="auto-width" id={item.sku}>
+                          <p className="auto-width" id={item.sku.split[0] + idx}>
                             Items remaining: {item.demoDetails.quantity}
                           </p>
-                          <p className="auto-width" id={item.sku + idx}>Ships from: {item.demoDetails.location}</p>
+                          <p className="auto-width" id={item.sku.split[-1] + idx}>Ships from: {item.demoDetails.location}</p>
                         </div>
                       ) : (
                         <div>
-                          <p className="auto-width" id={item.sku}>
+                          <p className="auto-width" id={item.sku.split[0] + idx}>
                             Items remaining: {Math.floor(Math.random() * 10) + 1}
                           </p>
-                          <p className="auto-width" id={item.sku + idx}>Ships from: Tucson, AZ</p>
+                          <p className="auto-width" id={item.sku.split[-1] + idx}>Ships from: Tucson, AZ</p>
                         </div>
                       )}
 
@@ -106,7 +106,7 @@ class APIMeshExample extends React.Component {
                         content="Source: Adobe Commerce" />
 
                       <Tooltip
-                        anchorId={item.name.slice(15)}
+                        anchorId={item.name.split[0] + idx}
                         place="bottom"
                         content="Source: Adobe Commerce" />
 
@@ -121,12 +121,12 @@ class APIMeshExample extends React.Component {
                         content="Source: ERP" />
 
                       <Tooltip
-                        anchorId={item.sku}
+                        anchorId={item.sku.split[0] + idx}
                         place="bottom"
                         content="Source: ERP" />
 
                       <Tooltip
-                        anchorId={item.sku + idx}
+                        anchorId={item.sku.split[-1] + idx}
                         place="bottom"
                         content="Source: ERP" />
 
