@@ -35,7 +35,7 @@
     "products": {
       "items": [
         {
-          "name": "Cough Drops (Cherry)",
+          "name": "Casio G-Shock Analog-Digital Red and Black Watch",
           "sku": "UHI123004",
           "price_range": {
             "minimum_price": {
@@ -50,7 +50,7 @@
           }
         },
         {
-          "name": "Cough Drops (Strawberry)",
+          "name": "42mm Men's Bulova Classic",
           "sku": "UHI123003",
           "price_range": {
             "minimum_price": {
@@ -65,7 +65,7 @@
           }
         },
         {
-          "name": "Cough Drops (Watermelon)",
+          "name": "42mm Men's Bulova Chronograph",
           "sku": "UHI123002",
           "price_range": {
             "minimum_price": {
@@ -80,7 +80,7 @@
           }
         },
         {
-          "name": "Cough Drops (Honey Lemon)",
+          "name": "37mm Men's Bulova Automatic",
           "sku": "UHI123001",
           "price_range": {
             "minimum_price": {
@@ -95,7 +95,7 @@
           }
         },
         {
-          "name": "Cough Drops (Variety Pack)",
+          "name": "41mm Men's Seiko Essentials",
           "sku": "UHI123005",
           "price_range": {
             "minimum_price": {
