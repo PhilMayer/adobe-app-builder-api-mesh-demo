@@ -1,4 +1,4 @@
-const SEARCH_TERM = "watches";
+const SEARCH_TERM = "sheet";
 const NUMBER_OF_RESULTS = 6;
 
 const query = {
