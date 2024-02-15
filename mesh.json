@@ -17,7 +17,7 @@
             ],
             "origin": [
                 "http://localhost:3000",
-                "https://q6v69y-3000.csb.app",
+                "https://5vvv5z-3000.csb.app",
                 "https://codesandbox.io"
             ]
         }
@@ -27,8 +27,8 @@
             "name": "AdobeCommerce",
             "handler": {
                 "graphql": {
-                    "endpoint": "https://cs-com249.adobedemo.com/graphql",
-                    "operationHeaders": { "Content-Type": "application/json", "store": "cs_eng"}
+                    "endpoint": "https://com806.adobedemo.com/graphql",
+                    "operationHeaders": { "Content-Type": "application/json", "store": "default"}
             
                 }
             }

@@ -1,4 +1,4 @@
-const SEARCH_TERM = "sheet";
+const SEARCH_TERM = "fibe";
 const NUMBER_OF_RESULTS = 6;
 
 const query = {

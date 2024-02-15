@@ -9,7 +9,7 @@ const USDollar = new Intl.NumberFormat("en-US", {
   style: 'currency',
   currency: 'USD',
 })
-const API_MESH_URL = "https://graph.adobe.io/api/64e42a45-0a37-417b-902a-59731ae4eecf/graphql?api_key=8cd4e0e8835f4dd4a7f7dbe27fafb96d"
+const API_MESH_URL = "https://graph.adobe.io/api/95ec9eaf-9494-4e9a-b368-643277b36e5e/graphql?api_key=75d887495ad74be6bb411e85d320afee"
 
 class APIMeshExample extends React.Component {
   constructor(props) {
@@ -48,7 +48,7 @@ class APIMeshExample extends React.Component {
     return (
       <>
         <div>
-          <img className="nav" src="cs.png" />
+          <img className="nav" src="bell.png" />
           <h2>Your search results</h2>
 
           <div className="results">
