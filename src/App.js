@@ -83,13 +83,13 @@ class APIMeshExample extends React.Component {
              
                       {item.demoDetails ? (
                         <div>
-                          <p className="auto-width" id={item.sku + idx}>
+                          <p style={{width: "130px"}} id={item.sku + idx}>
                             Items remaining: {item.demoDetails.quantity}
                           </p>
                         </div>
                       ) : (
                         <div>
-                          <p className="auto-width" id={item.sku + idx}>
+                          <p style={{width: "130px"}} id={item.sku + idx}>
                             Items remaining: {Math.floor(Math.random() * 10) + 1}
                           </p>
                         </div>
@@ -104,7 +104,7 @@ class APIMeshExample extends React.Component {
 
                       <Tooltip
                         anchorId={item.name.split[0] + idx}
-                        place="bottom"
+                        place="top"
                         content="Source: Adobe Commerce" />
 
                       <Tooltip
@@ -119,7 +119,7 @@ class APIMeshExample extends React.Component {
 
                       <Tooltip
                         anchorId={item.sku + idx}
-                        place="bottom"
+                        place="right"
                         content="Source: CPQ" />
 
                  
