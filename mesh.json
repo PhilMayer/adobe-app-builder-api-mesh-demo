@@ -27,8 +27,8 @@
             "name": "AdobeCommerce",
             "handler": {
                 "graphql": {
-                    "endpoint": "https://com806.adobedemo.com/graphql",
-                    "operationHeaders": { "Content-Type": "application/json", "store": "default"}
+                    "endpoint": "https://adobecommerceapps-prod.dummycachetest.com/graphql",
+                    "operationHeaders": { "Content-Type": "application/json", "store": "bodea_us"}
             
                 }
             }

@@ -9,7 +9,7 @@ const USDollar = new Intl.NumberFormat("en-US", {
   style: 'currency',
   currency: 'USD',
 })
-const API_MESH_URL = "https://graph.adobe.io/api/95ec9eaf-9494-4e9a-b368-643277b36e5e/graphql?api_key=75d887495ad74be6bb411e85d320afee"
+const API_MESH_URL = "https://graph.adobe.io/api/67eca3e1-80cf-46ca-8e56-deab4bb8a704/graphql?api_key=94c4286cbed84f21806741712238c9bf"
 
 class APIMeshExample extends React.Component {
   constructor(props) {
